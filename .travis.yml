@@ -1,9 +1,9 @@
- sudo: required
- services:
-    - docker
+sudo: required
+services:
+  - docker
 
 before_install:
-    - docker build -t aviral/docker-react -f Dockerfile.dev .
+  - docker build -t aviral/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run aviral/docker-react npm run test -- --coverage
+  - docker run aviral/docker-react npm run test -- --coverage
